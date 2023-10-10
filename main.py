@@ -43,7 +43,7 @@ class printerRequests:
     def jobCrawler():
         latestJob = printerRequests.getLatestJob(printer.server)['job_id']
         job = printerRequests.getJobById(printer.server, latestJob)
-        if job['status']=='completed':
+        if job['status']=='in_progress':
             jobDetails = printerRequests.getJobById(printer.server, job['job_id'])
             while(jobDetails['status']=='in_progress'):
                 jobDetails = json.loads(requests.get(printer.server + "/server/history/job?uid=" + job['job_id']).text)['result']['job']
