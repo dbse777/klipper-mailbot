@@ -1,0 +1,7 @@
+version: "3.4"
+services:
+  klipper-mailbot:
+    build: 
+      dockerfile: ./dockerfile
+#    env_file: 
+#      - docker-compose.env
