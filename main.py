@@ -62,4 +62,5 @@ class printerRequests:
 
             mailserver.sendMail(mailserver.send, mailserver.recp, jobDetails['filename'], filamentUsed, timeMessage)
 
-printerRequests.jobCrawler()
+while True:
+    printerRequests.jobCrawler()
