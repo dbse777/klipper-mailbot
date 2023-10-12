@@ -64,3 +64,4 @@ class printerRequests:
 
 while True:
     printerRequests.jobCrawler()
+    time.sleep(30)
