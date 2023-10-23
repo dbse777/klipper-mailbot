@@ -9,6 +9,7 @@ class mailserver:
     user = config.user
     pssw = config.pssw
     srvr = config.srvr
+    host = config.host
     port = 587
     send = config.send
     recp = config.recp
@@ -30,7 +31,7 @@ class mailserver:
         m.quit
 
 class printer:
-    server = 'http://' + 'dockerpi3.fritz.box'
+    server = 'http://' + mailserver.host
 
 class printerRequests:
     def getLatestJob(server):
