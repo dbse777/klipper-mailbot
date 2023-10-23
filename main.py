@@ -63,6 +63,10 @@ class printerRequests:
 
             mailserver.sendMail(mailserver.send, mailserver.recp, jobDetails['filename'], filamentUsed, timeMessage)
 
-while True:
-    printerRequests.jobCrawler()
-    time.sleep(30)
+def main():
+    print("Service started, waiting for print to start...")
+    while True:
+        printerRequests.jobCrawler()
+        time.sleep(30)
+
+main()
